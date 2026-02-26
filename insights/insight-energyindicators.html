@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Energy System Indicators | GreenAnalytics</title>
+    <title>Solar PV: From High-Cost Niche to Global Power Pillar | euGreenAnalytics</title>
+    <meta name="description" content="Strategic analysis of solar dominance in 2024: module deflation to $0.26/Wp, overcapacity, and new grid integration challenges.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* CSS Original Preservado e Otimizado */
         * {
             margin: 0;
             padding: 0;
@@ -34,7 +36,7 @@
         header {
             background: var(--bg-white);
             border-bottom: 1px solid var(--border);
-            padding: 1.5rem 0;
+            padding: 0.5rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -48,8 +50,7 @@
             justify-content: space-between;
             align-items: center;
         }
-
-
+        
         .logo {
             display: flex;
             align-items: center;
@@ -91,7 +92,7 @@
         .dropdown {
             display: none;
             position: absolute;
-            top: calc(100% + 0.5rem);  /* ← Usa calc em vez de margin */
+            top: calc(100% + 0.5rem);
             left: 0;
             background: var(--bg-white);
             border: 1px solid var(--border);
@@ -107,8 +108,8 @@
             top: 100%;
             left: 0;
             right: 0;
-            height: 0.5rem;  /* Mesma altura do gap */
-        }   
+            height: 0.5rem;
+        }       
 
         .nav-item:hover .dropdown {
             display: block;
@@ -130,50 +131,193 @@
 
         .hero {
             background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
-            padding: 5rem 2rem;
-            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 700;
             color: var(--text-dark);
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             line-height: 1.2;
         }
 
         .hero p {
-            font-size: 1.25rem;
+            font-size: 1.125rem;
             color: var(--text-light);
-            max-width: 700px;
-            margin: 0 auto;
         }
 
-        section {
+        .analysis {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 5rem 2rem;
+            padding: 4rem 2rem;
+        }
+
+        .intro-text {
+            margin-bottom: 3rem;
+        }
+
+        .intro-text h2 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .intro-text .lead {
+            font-size: 1.25rem;
+            line-height: 1.7;
+            color: var(--text-light);
+            margin-bottom: 0;
+            text-align: justify; /* Alinhamento conforme solicitado */
+        }
+
+        .chart-container {
+            margin: 3rem 0;
+            background: var(--bg-white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        .chart-container img {
+            width: 100%;
+            max-width: 850px;   /* controla o tamanho máximo */
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .chart-row {
+            display: flex;
+            gap: 20px;
+            margin: 32px 0;
+        }
+
+        .chart-row .chart-container {
+            flex: 1;
+            margin: 0;
+        }
+
+
+                .chart-source {
+            padding: 0.75rem 1.25rem;
+            font-size: 0.875rem;
+            color: var(--text-light);
+            text-align: right;
+            background: var(--bg-light);
+            border-top: 1px solid var(--border);
+            margin: 0;
+        }
+
+        .chart-source a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .chart-source a:hover {
+            text-decoration: underline;
+        }
+
+        .analysis p {
+            font-size: 1.0625rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            text-align: justify; /* Alinhamento conforme solicitado */
+        }
+
+        .analysis h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin: 2.5rem 0 1rem;
+            border-left: 4px solid var(--primary);
+            padding-left: 1rem;
+        }
+
+        .analysis ul {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .analysis li {
+            font-size: 1.0625rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+            margin-bottom: 0.75rem;
+        }
+
+        .analysis strong {
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 4rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .cta-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .cta-text h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1.25rem;
+            line-height: 1.2;
+        }
+
+        .cta-action {
             text-align: center;
         }
 
-        section h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
+        .cta-button {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.0625rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(5, 150, 105, 0.2);
         }
 
-        section p {
-            font-size: 1.125rem;
+        .cta-button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(5, 150, 105, 0.3);
+        }
+
+        .cta-note {
+            margin-top: 1rem;
+            font-size: 0.875rem;
             color: var(--text-light);
-            max-width: 700px;
-            margin: 0 auto;
         }
 
         footer {
             background: var(--text-dark);
             color: white;
             padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
         }
 
         .footer-content {
@@ -219,20 +363,19 @@
         }
 
         @media (max-width: 768px) {
-            .nav-center {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
+            .nav-center { display: none; }
+            .hero h1 { font-size: 2rem; }
+            .analysis { padding: 2rem 1.5rem; }
+            .cta-content { grid-template-columns: 1fr; gap: 2rem; }
+            .cta-text h2 { font-size: 1.5rem; }
+            p, .intro-text .lead { text-align: left; }
         }
     </style>
 </head>
 <body>
     <header>
         <nav>
-        <a href="../index.html" class="logo"><img src="../assets/marketing/logo-euGreenalytics.png" alt="euGreenalytics"></a>
+            <a href="../index.html" class="logo"><img src="../assets/marketing/logo-euGreenalytics.png" alt="euGreenalytics Logo"></a>
             <div class="nav-center">
                 <ul>
                     <li><a href="../index.html">Home</a></li>
@@ -253,7 +396,7 @@
                             <a href="insight-pvtechnology.html">PV Technology</a>
                             <a href="insight-flexibility-storage.html">Flexibility & Storage</a>
                             <a href="insight-electricityprices.html">Electricity Prices</a>
-                            <a href="insight-energyindicators.html">Energy System Indicators</a>
+                            <a href="insight/energyindicators.html">Energy System Indicators</a>
                         </div>
                     </li>
                     <li><a href="../index.html#about">About</a></li>
@@ -264,13 +407,77 @@
     </header>
 
     <section class="hero">
-        <h1>Energy System Indicators</h1>
-        <p>Track generation mix, carbon intensity, interconnection flows, and system reliability.</p>
+        <div class="hero-content">
+            <h1>Energy System Indicators</h1>
+            <p>The new frontiers of solar dominance and the evolution of system-wide integration.</p>
+        </div>
     </section>
 
-    <section>
-        <h2>Coming Soon</h2>
-        <p>This section is currently under development. Check back soon for comprehensive dashboards on European energy system performance and transformation metrics.</p>
+    <main class="analysis">
+        <article class="intro-text">
+            <h2>Solar PV: From High-Cost Niche to Global Power Pillar</h2>
+            <p class="lead">
+                Since 2010, the solar industry has shifted from a high-cost subsidized sector to a primary pillar of the global power system. As module prices approached a functional floor of $0.26/Wp in 2024, the market momentum shifted from marginal additions to system-wide dominance.
+            </p>
+        </article>
+
+        <p>
+            The decisive question for investors is no longer "Can solar compete?" but "How does the grid absorb this volume?" The current landscape is defined by massive overcapacity in manufacturing—principally in China—which has triggered a 50% price collapse in the last 18 months alone. For a grid operator, this means solar is now the cheapest tool for bulk energy, but its systemic utility depends entirely on the rapid deployment of "firming" technologies like BESS (Battery Energy Storage Systems) to mitigate the risks of duck-curve curtailment.
+        </p>
+
+        <div class="chart-container">
+            
+          <img src="assets/energyindicators/eracentmodule.png" alt="Solar module price evolution chart">
+            <p class="chart-source">Data source: <a href="https://www.irena.org/Data" target="_blank" rel="noopener">IRENA</a></p>
+        </div>
+
+        <h3>The era of the $0.20 module: Analyzing three phases of maturity</h3>
+
+        <p>
+            Analyzing the period between 2010 and 2024 reveals three distinct phases of market maturity:
+        </p>
+
+        <p>
+            <strong>The Maturity Trigger (2010–2015):</strong> Prices plummeted from $2.44/Wp to $0.72/Wp. During this phase, the Annual Market quadrupled, moving from 17 GW to 47 GW. This was the moment solar achieved grid parity in high-insolation regions.
+        </p>
+
+        <p>
+            <strong>The Vertical Surge (2016–2021):</strong> As prices stabilized below $0.50/Wp, the Cumulative Market entered an exponential phase, crossing the 850 GW threshold. The data shows that price erosion below a certain "critical mass" triggers a non-linear response in deployment.
+        </p>
+
+        <p>
+            <strong>The 2023–2024 Supply Shock:</strong> Despite a minor inflationary blip in 2022 due to supply chain constraints ($0.36/Wp), 2024 has seen a return to aggressive deflation ($0.26/Wp). This is reflected in the massive jump in the Annual Market to 452 GW. This surge is no longer driven by subsidies but by the sheer economic superiority of the technology.
+        </p>
+
+        <h3>Strategic Conclusion</h3>
+
+        <p>
+            The convergence of sub-30 cent modules and 450+ GW annual additions implies that we are moving from "Energy Scarcity" to "Intermittency Management." The value in the solar chain is migrating from the manufacturer of the hardware to the managers of the flexibility.
+        </p>
+
+        <p>
+            For the long-term investor, the verticality of the Cumulative Market suggests that the primary bottleneck is no longer CAPEX, but Systemic Integration. We are entering a phase where the "cost of the panel" is less relevant than the "cost of the connection" and the availability of land and permits.
+        </p>
+
+        <h3>Key takeaways</h3>
+        <ul>
+            <li><strong>Structural Deflation</strong> — Module prices in 2024 are nearly 90% lower than in 2010 ($0.26 vs $2.44), cementing solar as the lowest-cost generation source globally.</li>
+            <li><strong>Momentum Breakout</strong> — The Annual Market is now nearly 30 times larger than in 2010, indicating the industry has scaled into a global commodity.</li>
+            <li><strong>The Next Bottleneck</strong> — Grid saturation and interconnection queues. The next decade will be defined by "Solar + Storage" rather than hardware costs.</li>
+        </ul>
+    </main>
+
+
+  <section class="cta-section">
+        <div class="cta-content">
+            <div class="cta-text">
+                <h2>Need deeper insights for your business?</h2>
+            </div>
+            <div class="cta-action">
+                <a href="../index.html#contact" class="cta-button">Get in Touch</a>
+                <p class="cta-note">Let's discuss how data-driven analysis can support your strategy</p>
+            </div>
+        </div>
     </section>
 
     <footer>
@@ -291,12 +498,12 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>GreenAnalytics</h4>
+                <h4>euGreenAnalytics</h4>
                 <p style="color: #9ca3af; font-size: 0.875rem; line-height: 1.6;">Independent energy data analysis and visualisation platform.</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; GreenAnalytics 2025 &mdash; All rights reserved</p>
+            <p>&copy; euGreenAnalytics 2026 &mdash; All rights reserved</p>
         </div>
     </footer>
 </body>

@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* CSS Original Preservado e Otimizado */
         * {
             margin: 0;
             padding: 0;
@@ -34,7 +35,7 @@
         header {
             background: var(--bg-white);
             border-bottom: 1px solid var(--border);
-            padding: 1.5rem 0;
+            padding: 0.5rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -48,6 +49,7 @@
             justify-content: space-between;
             align-items: center;
         }
+        
         .logo {
             display: flex;
             align-items: center;
@@ -89,7 +91,7 @@
         .dropdown {
             display: none;
             position: absolute;
-            top: calc(100% + 0.5rem);  /* ← Usa calc em vez de margin */
+            top: calc(100% + 0.5rem);
             left: 0;
             background: var(--bg-white);
             border: 1px solid var(--border);
@@ -105,8 +107,8 @@
             top: 100%;
             left: 0;
             right: 0;
-            height: 0.5rem;  /* Mesma altura do gap */
-        }   
+            height: 0.5rem;
+        }       
 
         .nav-item:hover .dropdown {
             display: block;
@@ -128,50 +130,193 @@
 
         .hero {
             background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
-            padding: 5rem 2rem;
-            text-align: center;
+            padding: 3rem 2rem;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 700;
             color: var(--text-dark);
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             line-height: 1.2;
         }
 
         .hero p {
-            font-size: 1.25rem;
+            font-size: 1.125rem;
             color: var(--text-light);
-            max-width: 700px;
-            margin: 0 auto;
         }
 
-        section {
+        .analysis {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 5rem 2rem;
+            padding: 4rem 2rem;
+        }
+
+        .intro-text {
+            margin-bottom: 3rem;
+        }
+
+        .intro-text h2 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .intro-text .lead {
+            font-size: 1.25rem;
+            line-height: 1.7;
+            color: var(--text-light);
+            margin-bottom: 0;
+            text-align: justify; /* Alinhamento conforme solicitado */
+        }
+
+        .chart-container {
+            margin: 3rem 0;
+            background: var(--bg-white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        .chart-container img {
+            width: 100%;
+            max-width: 850px;   /* controla o tamanho máximo */
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .chart-row {
+            display: flex;
+            gap: 20px;
+            margin: 32px 0;
+        }
+
+        .chart-row .chart-container {
+            flex: 1;
+            margin: 0;
+        }
+
+
+                .chart-source {
+            padding: 0.75rem 1.25rem;
+            font-size: 0.875rem;
+            color: var(--text-light);
+            text-align: right;
+            background: var(--bg-light);
+            border-top: 1px solid var(--border);
+            margin: 0;
+        }
+
+        .chart-source a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .chart-source a:hover {
+            text-decoration: underline;
+        }
+
+        .analysis p {
+            font-size: 1.0625rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            text-align: justify; /* Alinhamento conforme solicitado */
+        }
+
+        .analysis h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin: 2.5rem 0 1rem;
+            border-left: 4px solid var(--primary);
+            padding-left: 1rem;
+        }
+
+        .analysis ul {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .analysis li {
+            font-size: 1.0625rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+            margin-bottom: 0.75rem;
+        }
+
+        .analysis strong {
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 4rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .cta-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .cta-text h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1.25rem;
+            line-height: 1.2;
+        }
+
+        .cta-action {
             text-align: center;
         }
 
-        section h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
+        .cta-button {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.0625rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(5, 150, 105, 0.2);
         }
 
-        section p {
-            font-size: 1.125rem;
+        .cta-button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(5, 150, 105, 0.3);
+        }
+
+        .cta-note {
+            margin-top: 1rem;
+            font-size: 0.875rem;
             color: var(--text-light);
-            max-width: 700px;
-            margin: 0 auto;
         }
 
         footer {
             background: var(--text-dark);
             color: white;
             padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
         }
 
         .footer-content {
@@ -217,13 +362,12 @@
         }
 
         @media (max-width: 768px) {
-            .nav-center {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
+            .nav-center { display: none; }
+            .hero h1 { font-size: 2rem; }
+            .analysis { padding: 2rem 1.5rem; }
+            .cta-content { grid-template-columns: 1fr; gap: 2rem; }
+            .cta-text h2 { font-size: 1.5rem; }
+            p, .intro-text .lead { text-align: left; }
         }
     </style>
 </head>
@@ -245,13 +389,13 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="../insights/insights.html">Insights</a>
+                        <a href="insights.html">Insights</a>
                         <div class="dropdown">
                             <a href="insight-pvmarket.html">PV Market</a>
                             <a href="insight-pvtechnology.html">PV Technology</a>
                             <a href="insight-flexibility-storage.html">Flexibility & Storage</a>
                             <a href="insight-electricityprices.html">Electricity Prices</a>
-                            <a href="insight-energyindicators.html">Energy System Indicators</a>
+                            <a href="insight/energyindicators.html">Energy System Indicators</a>
                         </div>
                     </li>
                     <li><a href="../index.html#about">About</a></li>
@@ -261,15 +405,149 @@
         </nav>
     </header>
 
-
     <section class="hero">
-        <h1>Flexibility & Storage</h1>
-        <p>Insights and data on battery storage, imbalance markets, and system flexibility.</p>
+        <div class="hero-content">
+            <h1>Flexibility & Storage</h1>
+            <p>Analyzing storage technologies, capacity trends, and the economics shaping grid-scale energy systems.</p>
+        </div>
     </section>
 
-    <section>
-        <h2>Coming Soon</h2>
-        <p>This section is currently under development. Check back soon for analysis of battery operations, market signals, and flexible asset economics.</p>
+    <section class="analysis">
+        <div class="intro-text">
+            <h2>Storage Economics Are Catching Up With System Needs</h2>
+            <p class="lead" style="text-align: justify;">
+                As European power systems absorb increasing volumes of variable renewable generation, storage 
+                is no longer evaluated solely on technical performance. The decisive question is economic viability 
+                at scale. Understanding how different storage technologies combine installed capacity, efficiency, 
+                and cost evolution is essential to assessing their future role in the energy system.
+            </p>
+        </div>
+
+        <p>
+            When viewed together, the two datasets — one comparing installed power, efficiency, and projected 
+            CAPEX, and the other tracking CAPEX evolution from 2016 to 2030 — reveal a clear pattern: technologies 
+            that shape the system today are those where economics and scalability have already converged.
+        </p>
+
+        <div class="chart-container">
+            <img 
+                src="assets/flexibility&storage/storage_capacity_efficiency_capex_2.png" 
+                alt="Installed power, round-trip efficiency and projected CAPEX by storage technology"
+            >
+            <p class="chart-source">Data source: <a href="https://www.sandia.gov/ess-ssl/gesdb/public/index.html" target="_blank" rel="noopener">DOE Global Energy Storage Database</a></p>
+        </div>
+
+        <h3>From dominant capacity to durable economics: why some technologies scale</h3>
+
+        <p>
+            Pumped Hydro Storage (PHS) stands out as the structural anchor of large-scale storage. Its dominance 
+            in installed capacity is not just a legacy of historical investment, but the result of a robust economic 
+            profile. With CAPEX already low in 2016 and projected to fall further by 2030, PHS combines scale, 
+            longevity, and acceptable efficiency in a way few technologies can match.
+        </p>
+
+        <p>
+            This explains its continued relevance despite its geographic constraints. Where it can be deployed, 
+            PHS remains unmatched for bulk energy shifting and long-duration balancing. The cost trajectory confirms 
+            that its competitiveness is structural, not cyclical.
+        </p>
+
+        <p>
+            Compressed Air Energy Storage (CAES) follows a similar, though more nuanced, logic. Its projected CAPEX 
+            remains low relative to most battery technologies, reinforcing its potential for capacity-oriented 
+            applications. However, the limited improvement in efficiency over time highlights a key trade-off: CAES 
+            can deliver power at scale, but with higher energy losses. In systems increasingly shaped by efficiency 
+            and carbon considerations, this limits its universal applicability.
+        </p>
+
+        <div class="chart-container">
+            <img 
+                src="assets/flexibility&storage/capex_evolution_2016_2030_2.png" 
+                alt="CAPEX evolution by storage technology: 2016 vs 2030e"
+            >
+            <p class="chart-source">Data source: <a href="https://www.sandia.gov/ess-ssl/gesdb/public/index.html" target="_blank" rel="noopener">DOE Global Energy Storage Database</a></p>
+        </div>
+
+        <h3>Lithium-ion: from expensive innovation to system enabler</h3>
+
+        <p>
+            Lithium-ion storage tells the most dynamic story across both charts. In 2016, its investment costs 
+            placed it firmly in the "emerging" category. By 2030, projected CAPEX reductions dramatically change 
+            its positioning, bringing it closer to cost parity with more established technologies.
+        </p>
+
+        <p>
+            This cost compression explains why lithium-ion is rapidly expanding despite its comparatively modest 
+            installed capacity today. Its high round-trip efficiency and modularity make it uniquely suited for 
+            short-duration flexibility, congestion management, and market arbitrage. Rather than competing directly 
+            with PHS or CAES, lithium-ion complements them by addressing parts of the system where speed and 
+            responsiveness matter more than energy volume.
+        </p>
+
+        <h3>Why some technologies remain niche</h3>
+
+        <p>
+            Redox flow batteries, sodium sulphur, and lead-acid systems illustrate the limits of cost reduction 
+            alone. While all show substantial CAPEX declines between 2016 and 2030, their absolute cost levels 
+            remain relatively high. Combined with moderate efficiencies and limited deployment, this constrains 
+            their role to specific use cases rather than system-wide solutions.
+        </p>
+
+        <p>
+            Their presence in the data is nevertheless important. These technologies highlight how diversification 
+            continues in the storage landscape, even if only a subset will achieve the scale required to materially 
+            influence system dynamics.
+        </p>
+
+        <h3>A system view: cost trends explain today's capacity mix</h3>
+
+        <p>
+            Taken together, the two graphs show that today's installed capacity is already aligned with long-term 
+            cost signals. Technologies that dominate the system are not those with the best single performance 
+            metric, but those where cost, efficiency, and scalability intersect.
+        </p>
+
+        <p>
+            This reinforces a critical insight for investors, system operators, and policymakers alike: storage 
+            deployment is increasingly driven by economic fit within the system, not by technological promise alone. 
+            As renewable penetration rises, the value of storage will depend less on headline efficiency and more 
+            on how well each technology integrates into a constrained, interconnected grid.
+        </p>
+
+        <h3>Strategic conclusion</h3>
+
+        <p>
+            From a strategic standpoint, storage decisions must now be approached as system design choices rather 
+            than technology selections. Mature, low-cost solutions continue to anchor large-scale balancing, while 
+            rapidly declining battery costs unlock new layers of flexibility closer to demand and grid constraints.
+        </p>
+
+        <p>
+            The competitive edge will increasingly lie in combining technologies, durations, and locations to match 
+            system needs. In an energy system shaped by renewables, scale follows economics — but value is defined 
+            by system integration.
+        </p>
+
+        <h3>Key takeaways</h3>
+
+<ul>
+    <li><strong>Storage scales with system fit</strong> — Economics must match real grid constraints</li>
+    <li><strong>Low CAPEX drives dominance</strong> — Cost structure outweighs single-metric performance</li>
+    <li><strong>Lithium-ion reshapes flexibility</strong> — Enables short-duration and local optimisation</li>
+    <li><strong>Cost decline alone doesn’t ensure scale</strong> — Deployment limits define market role</li>
+</ul>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <div class="cta-text">
+                <h2>Need deeper insights for your business?</h2>
+            </div>
+            <div class="cta-action">
+                <a href="../index.html#contact" class="cta-button">Get in Touch</a>
+                <p class="cta-note">Let's discuss how data-driven analysis can support your strategy</p>
+            </div>
+        </div>
     </section>
 
     <footer>
@@ -290,12 +568,12 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>GreenAnalytics</h4>
+                <h4>euGreenAnalytics</h4>
                 <p style="color: #9ca3af; font-size: 0.875rem; line-height: 1.6;">Independent energy data analysis and visualisation platform.</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; GreenAnalytics 2025 &mdash; All rights reserved</p>
+            <p>&copy; euGreenAnalytics 2026 &mdash; All rights reserved</p>
         </div>
     </footer>
 </body>
